@@ -48,7 +48,7 @@ function App() {
             <BrowserRouter>
                 
                 <Routes>
-                    <Route path="dash" element={<DashboardLayout basket={basket} />}>
+                    <Route path="dash" element={<DashboardLayout basket={basket} setLoggedIn={setLoggedIn}/>}>
                         <Route path="home" element={<Home />} />
                         <Route path="about" element={<About />} />
                         <Route path="products" element={<Products />} />

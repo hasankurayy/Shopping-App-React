@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-function Header({basket}) {
+function Header({basket, setLoggedIn}) {
     return (
         <header>
             <div className="container">
@@ -23,7 +23,10 @@ function Header({basket}) {
                         <NavLink to="basket"
                             className={(navData) => navData.isActive ? "nav-link active" : "nav-link"}>
                             <i class="fa-solid fa-cart-shopping"></i> <span>({basket.length})</span>   
-                        </NavLink>
+                        </NavLink> &nbsp;
+                        <button className='btn btn-danger btn-sm' onClick={() => setLoggedIn(false)}>
+                            <a href="/login" style={{color: "white"}} >Logout</a>
+                        </button>
                     </nav>
                 </div>
             </div>
