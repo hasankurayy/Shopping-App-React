@@ -25,7 +25,7 @@ function Header({basket, setLoggedIn}) {
                             <i class="fa-solid fa-cart-shopping"></i> <span>({basket.length})</span>   
                         </NavLink> &nbsp;
                         <button className='btn btn-danger btn-sm' onClick={() => setLoggedIn(false)}>
-                            <a href="/login" style={{color: "white"}} >Logout</a>
+                            <a href="/" style={{color: "white"}} >Logout</a>
                         </button>
                     </nav>
                 </div>
