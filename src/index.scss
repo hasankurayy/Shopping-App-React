@@ -1,0 +1,368 @@
+.app {
+    background-color: #282828;
+}
+
+html{
+    background-color: #282828;
+}
+
+.footer a,
+header a,
+main a {
+    text-decoration: none;
+}
+
+header{
+    padding: 20px 0;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .logo{
+        transform: rotate(-6deg);
+        transition: all .3s ease;
+    }
+    .logo:hover{
+        transform: rotate(0deg);
+    }
+
+    .brand{
+        font-size: 30px;
+        color: #fff;
+        font-weight: 700;
+        background-color: #2d2d2d;
+        border-radius: 40px;
+        border-bottom: 2px solid #6294de;
+        text-shadow: 2px 2px 0px #000;
+        font-family: "Leckerli One";
+    }
+    .brand:hover{
+        color: #fff;
+    }
+
+    .nav-link{
+        font-weight: 700;
+        color: #999;
+        border-radius: 0;
+        font-size: 14px;
+    }
+    .nav-link:hover{
+        color: #fff;
+    }
+}
+
+footer{
+    padding: 40px 0 40px 0;
+    .nav-link{
+        color: rgba(255,255,255,.75);
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 10px;
+    }
+    .nav-link:hover{
+        color: #fff;
+    }
+    .nav-link.active{
+        color: #fff;
+        border-bottom: 1px solid #666;
+    }
+
+    .copyrights{
+        color: rgba(255,255,255,.75);
+        text-align: center;
+        margin-top: 25px;
+
+        a{
+            color: rgba(255,255,255,.75);
+        }
+        a:hover{
+            color: #fff;
+        }
+    }
+    
+}
+
+/* Main */
+main {
+    background-color: #fff;
+
+    .content {
+        padding: 40px 0;
+    }
+
+    .pg-header {
+        padding: 60px 0;
+        background-color: #e6e6e6;
+
+        h1 {
+            color: #333;
+            font-weight: 900;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+    }
+}
+
+.about {
+    h2 {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    h2::after {
+        position: absolute;
+        content: "";
+        background-color: #666;
+        width: 50px;
+        height: 2px;
+        bottom: -6px;
+        left: 0;
+    }
+}
+
+.products-main {
+    .products-row {
+
+        .card {
+            box-shadow: 0 10px 10px #eee;
+            height: 515px;
+
+
+            .btn-primary {
+                font-weight: 600;
+            }
+
+            .card-body {
+                background-color: #f5f5f5;
+            }
+
+            .price strong {
+                color: #0d6efd;
+            }
+
+            .img-wrap {
+                height: 300px;
+                text-align: center;
+                border-bottom: 1px solid rgba(0, 0, 0, .125);
+                display: flex;
+                align-items: center;
+                background-color: rgba(0, 0, 0, .125);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .col-lg-4 {
+            margin-bottom: 20px;
+        }
+
+        .card-text {
+            color: #666;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.single-main {
+    h2 {
+        text-transform: capitalize;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    h2::after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        bottom: -6px;
+        height: 2px;
+        background-color: #666;
+        left: 0;
+    }
+
+    .btn-primary {
+        font-weight: 600;
+    }
+
+    .price {
+        font-size: 22px;
+    }
+
+    .price strong {
+        color: #0d6efd;
+    }
+}
+
+.posts {
+    .col-sm-6 {
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        text-transform: capitalize;
+    }
+
+    .card-text {
+        text-align: center;
+    }
+
+    .card {
+        height: 200px;
+        background-color: #eee;
+    }
+}
+
+.basket{
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    
+    h2{
+        padding: 10px;
+        border-bottom: 2px solid black;
+        margin-bottom: 20px;
+    }
+
+    .item{
+        font-size: 17px;
+        display: flex;
+        padding: 0 50px;
+        margin-bottom: 10px;
+
+        .actions{
+            flex: 1;
+            text-align: center;
+
+            button{
+                border: none;
+                padding: 0 10px;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+        }
+
+        .name{
+            flex: 1;
+            text-align: center;
+        }
+
+        .amount-price{
+            flex: 1;
+            text-align: center;
+
+            span{
+                color: orange;
+            }
+        }
+    }
+
+    .total-price{
+        display: flex;
+        border-top: 2px solid black;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+
+        .name{
+            flex: 1;
+            text-align: center;
+        }
+
+        .price{
+            flex: 1;
+            text-align: center;
+            color: green;
+        }
+    }
+}
+
+.login-main{
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        hr{
+            width: 25%;
+        }
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+
+        input{
+            outline: 0;
+            border-radius: 10px;
+        }
+    }
+
+    form > div{
+        margin-bottom: 20px;
+    }
+
+    button{
+        outline: 0;
+    }
+}
+
+.register-success{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: transparent;
+    }
+}
+
+.login-info{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+
+// buttons
+.btn-primary {
+    border-radius: 0;
+}
+
+// breadcrumb
+.breadcrumb {
+    margin-bottom: 0;
+    font-size: 13px;
+
+    a {
+        color: #000;
+    }
+}
+
+@media all and (max-width: 991px) {
+    .breadcrumb.justify-content-end {
+        justify-content: flex-start !important;
+    }
+}
