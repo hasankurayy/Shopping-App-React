@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import DashboardLayout from "./layouts/DashboardLayout"
@@ -20,7 +20,6 @@ function App() {
 
     const [basket, setBasket] = useState([])
     const [loggedIn, setLoggedIn] = useState(false)
-
 
 
     const addToBasket = (singleProduct) => {
@@ -49,7 +48,7 @@ function App() {
                 
                 <Routes>
                     <Route path="dash" element={<DashboardLayout basket={basket} setLoggedIn={setLoggedIn}/>}>
-                        <Route path="home" element={<Home />} />
+                        <Route path="home" element={<Home addToBasket={addToBasket} />} />
                         <Route path="about" element={<About />} />
                         <Route path="products" element={<Products />} />
                         <Route path="products/:productId" element={<SingleProduct addToBasket={addToBasket} removeFromBasket={removeFromBasket} />} />
